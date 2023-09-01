@@ -59,12 +59,16 @@ def save_entry():
     return jsonify("Success")
 
 #Write API here
-
+def bot():
 
     # Get User Input
-    
+    input_text = request.json.get("user_bot_input_text")
    
     # Call the method to get bot response
+    bot_res = bot_response(input_text)
+    response = {
+        "bot_response": bot_res
+    }
     
 
     
